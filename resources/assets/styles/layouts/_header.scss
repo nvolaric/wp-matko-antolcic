@@ -5,3 +5,164 @@
 .banner .nav a {
   @extend .nav-link;
 }
+
+.banner {
+  background: url(../images/ricepaper.png);
+  border-bottom: 1px solid $secondary;
+
+  @include text-shadow(0, 0, 2px, rgba(0,0,0,0.2));
+}
+
+.banner a.brand {
+  color: black;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 46px;
+    height: auto;
+  }
+}
+
+.nav-primary {
+  text-transform: uppercase;
+}
+//
+// .navbar-toggler .navbar-toggler-icon {
+//   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+// }
+//
+// .navbar-toggler {
+//   border: 2px solid $primary-fade;
+// }
+
+.language-select {
+  font-size: 0.8rem;
+
+  .active {
+    font-weight: bold;
+  }
+}
+
+/* hamburger animacija */
+.third-button,
+.third-button:active,
+.third-button:focus {
+  border: 0 !important;
+  outline: none;
+}
+
+.animated-icon {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.animated-icon span {
+  background: $primary;
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.animated-icon span:nth-child(1) {
+  top: 0;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.animated-icon span:nth-child(2) {
+  top: 10px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.animated-icon span:nth-child(3) {
+  top: 20px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.animated-icon.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 0;
+  left: 8px;
+}
+
+.animated-icon.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.animated-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 21px;
+  left: 8px;
+}
+
+@include media-breakpoint-up(md) {
+  .language-select {
+    font-size: 0.7rem;
+    padding-left: 0;
+  }
+
+  .banner a.brand {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .language-select {
+    padding-left: 124px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .nav-primary,
+  .brand {
+    font-size: 0.8rem;
+  }
+
+  .language-select {
+    font-size: 0.6rem;
+    padding-left: 108px;
+  }
+}

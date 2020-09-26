@@ -2,9 +2,25 @@
 @import "~bootstrap/scss/functions";
 
 $theme-colors: (
-  primary: #525ddc
+  primary: #514734,
+  gray: #363636
 );
 
+$primary: #514734;
+$primary-fade: rgba(#514734, 0.5);
+$secondary: #dcbf88;
+$gray: #363636;
+$black: #000;
+
 /** Bootstrap navbar fix (https://git.io/fADqW) */
-$navbar-dark-toggler-icon-bg: none;
-$navbar-light-toggler-icon-bg: none;
+// $navbar-dark-toggler-icon-bg: none;
+// $navbar-light-toggler-icon-bg: none;
+
+$navbar-light-color:                $primary !default;
+$navbar-light-hover-color:          rgba($primary, 0.7) !default;
+$navbar-light-active-color:         rgba($black, 0.9) !default;
+$navbar-light-disabled-color:       rgba($primary, 0.3) !default;
+
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0, 0, 0, 0.4)) {
+  text-shadow: $x $y $blur $color;
+}
