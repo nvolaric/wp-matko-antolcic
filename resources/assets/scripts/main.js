@@ -9,6 +9,20 @@ import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
+import 'ekko-lightbox/dist/ekko-lightbox.js';
+
+// import then needed Font Awesome functionality
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+// import the Facebook and Twitter icons
+import { faFacebookSquare, faTwitterSquare, faInstagramSquare } from '@fortawesome/free-brands-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+
+// add the imported icons to the library
+library.add(faFacebookSquare, faTwitterSquare, faInstagramSquare, faEnvelope, faPhone);
+
+// tell FontAwesome to watch the DOM and add the SVGs when it detects icon markup
+dom.watch();
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -19,6 +33,7 @@ const routes = new Router({
   // About Us page, note the change from about-us to aboutUs.
   aboutUs,
 });
+
 
 // Load Events
 jQuery(document).ready(() => routes.loadEvents());

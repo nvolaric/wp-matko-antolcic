@@ -1,0 +1,27 @@
+footer.content-info {
+  background: url(../images/ricepaper.png);
+  position: relative;
+
+  p.icons {
+    font-size: 1.5rem;
+
+    a {
+      color: black;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  .nvlogo {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+}
+
+.home footer.content-info,
+.page footer.content-info {
+  border-top: 1px solid $secondary;
+}

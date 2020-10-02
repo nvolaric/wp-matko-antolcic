@@ -6,11 +6,19 @@
     @include('partials.header')
     @if ( is_home() )
       @include('partials.slideshow')
+    @else
+    <div class="wrap title-wrap">
+      @yield('title')
+    </div>
     @endif
-    <div class="wrap container" role="document">
-      <div class="content">
+    <div class="wrap-content">
+    <div class="anchor" id="radovi"></div>
+    <div class="container container-main pb-5" role="document">
+      <div class="content p-4">
         <main class="main">
-          <!-- @yield('content') -->
+            <div class="row">
+            @yield('content')
+          </div>
         </main>
         @if (App\display_sidebar())
           <!-- <aside class="sidebar">
@@ -19,6 +27,7 @@
         @endif
       </div>
     </div>
+  </div>
     @php do_action('get_footer') @endphp
     @include('partials.footer')
     @php wp_footer() @endphp

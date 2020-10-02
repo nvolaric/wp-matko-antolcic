@@ -4,3 +4,298 @@
 .wp-block-gallery .blocks-gallery-item {
   flex-grow: inherit;
 }
+
+article.post {
+  color: $gray;
+
+  p {
+    line-height: 1.6rem;
+  }
+}
+
+div.anchor {
+  display: block;
+  position: relative;
+  top: -5rem;
+  visibility: hidden;
+}
+
+.page .page-title {
+  margin-top: 5rem;
+}
+
+.single .single-title h1 {
+  font-size: 3.5rem;
+}
+
+.wrap-content {
+  background: white;
+}
+
+.single .wrap-content {
+  background: white;
+  background: url(../images/ricepaper.png);
+  background-clip: padding-box;
+  border-top: 1px solid #dcbf88;
+  // padding-bottom: 6rem;
+}
+
+.home .wrap.container-fluid {
+  background: white;
+  background-clip: padding-box;
+  padding-top: 3rem;
+  // padding-bottom: 6rem;
+}
+
+.single .container-main {
+  position: relative;
+  top: -4rem;
+  background: white;
+  //  padding: 2rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #dcbf88;
+
+  @include box-shadow(1px, 2px, 5px, rgba(0,0,0,0.7));
+  @include border-radius(1rem);
+}
+
+.title-wrap {
+  // margin-bottom: -165px;
+}
+
+.gallery-radovi {
+  background: black;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  // margin-top: -2rem;
+  // margin-left: -2rem;
+  // margin-right: -2rem;
+}
+
+.wp-block-gallery {
+  padding-bottom: 2rem;
+}
+
+.carousel-inner {
+  position: fixed;
+  z-index: -999;
+}
+
+// .single-title {
+//   top: 30%;
+// }
+
+h1.entry-title {
+  // font-size: 4rem;
+  color: white;
+
+  @include text-shadow(0, 0, 2px, rgba(0,0,0,0.2));
+}
+
+.page h1.entry-title {
+  color: black;
+}
+
+/* [1] The container */
+.img-hover-zoom {
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+article img {
+  transition: transform 0.5s ease;
+  overflow: hidden;
+}
+
+.img-hover-zoom--brightness img {
+  transition: transform 1s, filter 0.5s ease-in-out;
+  transform-origin: center center;
+  filter: brightness(75%);
+}
+
+.home article img {
+  width: 100%;
+  height: 40%;
+  height: 17rem;
+  object-fit: cover;
+}
+
+/* The Transformation */
+.img-hover-zoom--brightness:hover img {
+  filter: brightness(100%);
+  transform: scale(1.1);
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.1);
+}
+
+.single h2.excerpt {
+  font-size: 1rem;
+  background: black;
+  color: white;
+  margin-bottom: 0;
+  padding: 2rem 4rem 0 4rem;
+  text-align: center;
+
+  @include border-radii(1rem, 1rem, 0, 0);
+}
+
+.single .wp-block-gallery {
+  @include border-radii(0, 0, 1rem, 1rem);
+}
+// Gallery captions
+
+.wp-block-gallery .blocks-gallery-item figure {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wp-block-gallery .blocks-gallery-item figcaption {
+  position: relative;
+  bottom: auto;
+  width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  padding: 10px 0 20px 0;
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 0%, transparent);
+}
+
+.home article h2.entry-title {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 0;
+}
+
+.home article a {
+  color: black;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:hover h2 {
+    color: $primary;
+  }
+
+  &:hover img {
+    // border-color: $primary;
+  }
+}
+
+.home article header p {
+  font-size: 0.7rem;
+  text-align: center;
+  color: black;
+}
+
+.ekko-lightbox .modal-footer {
+  font-size: 0.7rem;
+  color: #fff;
+  border-top: none;
+  padding: 0 1rem;
+  text-align: center;
+  // display: block;
+  // background-color: rgba(0, 0, 0, 0.9);
+}
+
+.ekko-lightbox .modal-body {
+  padding: 1rem 1rem 0.5rem 1rem;
+  padding-top: 0;
+  background: none;
+}
+
+.ekko-lightbox .modal-header {
+  border: none;
+  padding: 0 0 1rem 1rem;
+  position: fixed;
+  right: 0.5rem;
+  top: 0;
+  z-index: 10000;
+
+  .close {
+    color: white;
+    padding: 0.5rem;
+    margin: 0;
+  }
+}
+
+.modal-backdrop.show {
+  opacity: 0.9;
+}
+
+.modal-content {
+  background: none;
+  overflow: hidden;
+}
+
+.wp-block-column {
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+@include media-breakpoint-down(xs) {
+  article img {
+    height: auto !important;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  article img {
+    height: 20rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .single .container {
+    //  padding: 1rem;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .single h2.excerpt {
+    @include border-radii(0.7rem, 0.7rem, 0, 0);
+  }
+
+  .single .wp-block-gallery {
+    @include border-radii(0, 0, 0.7rem, 0.7rem);
+  }
+
+  .single .container-main {
+    max-width: 100%;
+
+    @include border-radius(0);
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .single .single-title h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .home article h2.entry-title {
+    font-size: 0.8rem;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  article.post {
+    font-size: 0.9rem;
+  }
+
+  .post .entry-content,
+  .page .entry-content {
+    padding: 4rem;
+  }
+
+  .gallery-radovi {
+    margin: -4rem -4rem 3rem -4rem;
+  }
+}
