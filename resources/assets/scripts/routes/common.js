@@ -19,14 +19,28 @@ export default {
           scrollTop: $('#kontakt').offset().top }, 500);
       });
 
-
+// ovde maknuti /mantolcic
     if ($('.single').length || $('.page').length) {
         var homeurl = window.location.host;
-        $('a[href*="#radovi"]').attr('href', 'https://' + homeurl + '#radovi');
+        $('a[href*="#radovi"]').attr('href', 'https://' + homeurl + '/mantolcic/#radovi');
 
         $('.wp-block-gallery figure a').addClass('img-hover-zoom');
 
     }
+
+    $('.navbar a').on('click', function(){
+      $('.navbar-collapse').collapse('hide');
+      $('.animated-icon').toggleClass('open');
+    });
+
+    $('footer .wpforms-recaptcha-container').hide();
+    $('footer .wpforms-form button').hide();
+
+
+    $('footer .wpforms-container-full').on('click', function(){
+      $('footer .wpforms-recaptcha-container').slideDown();
+      $('footer .wpforms-form button').slideDown();
+    });
 
   },
   finalize() {

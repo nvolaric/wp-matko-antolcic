@@ -1,5 +1,5 @@
-<header class="banner py-1 mb-4">
-<nav class="navbar navbar-light navbar-expand-md  justify-content-center fixed-top py-2">
+<header class="banner fixed-top mb-4">
+<nav class="navbar navbar-light navbar-expand-md  justify-content-center py-2">
     <div class="container-fluid">
       <a class="brand animate__animated animate__fadeIn" href="{{ home_url('/') }} "><img src="@asset('images/matko-antolcic-logo-64.png')" width="64" alt="logo" class="pr-2"/>{{ get_bloginfo('name', 'display') }}</a>
       <!-- <button class="navbar-toggler ml-1 third-button" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">

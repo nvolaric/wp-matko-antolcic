@@ -1,0 +1,49 @@
+footer div.wpforms-container-full .wpforms-form .wpforms-field-label {
+  color: $primary;
+  font-weight: normal;
+  font-size: 0.65rem;
+  padding-bottom: 0.2rem;
+}
+
+footer div.wpforms-container-full .wpforms-form .wpforms-required-label {
+  color: $primary;
+  display: none;
+}
+
+footer div.wpforms-container-full .wpforms-form input.wpforms-field-medium,
+footer div.wpforms-container-full .wpforms-form textarea.wpforms-field-medium {
+  border: 1px solid $secondary;
+}
+
+footer div.wpforms-container-full .wpforms-form button[type=submit] {
+  background: $primary;
+  border: 1px solid $secondary;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+
+  @include border-radius(3px);
+
+  &:hover {
+    background: darken($primary, 7%);
+    border: 1px solid $secondary;
+  }
+}
+
+footer div.wpforms-container-full .wpforms-form .wpforms-recaptcha-container {
+  padding: 10px 0 5px 0;
+}
+
+@include media-breakpoint-up(sm) {
+  div.wpforms-container-full .wpforms-form textarea.wpforms-field-medium,
+  footer div.wpforms-container-full .wpforms-form .wpforms-field-label,
+  div.wpforms-container-full .wpforms-form input.wpforms-field-medium,
+  div.wpforms-container-full .wpforms-form select.wpforms-field-medium,
+  div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium,
+  div.wpforms-container-full .wpforms-form .wpforms-recaptcha-container,
+  div.wpforms-container-full .wpforms-form .wpforms-submit-container,
+  div.wpforms-container-full .wpforms-form label.wpforms-error {
+    max-width: 60% !important;
+    margin: 0 auto;
+  }
+}
